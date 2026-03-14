@@ -2,6 +2,7 @@ export default function TemplateFact({
   text, 
   fontSize = 55, 
   fontFamily = "'Oswald', sans-serif",
+  backgroundColor = "#1b6db5",
   textColor = "#1a3b5c",
   textAlign = "center",
   lineHeight = 1.2,
@@ -11,6 +12,7 @@ export default function TemplateFact({
   text: string;
   fontSize?: number;
   fontFamily?: string;
+  backgroundColor?: string;
   textColor?: string;
   textAlign?: string;
   lineHeight?: number;
@@ -18,7 +20,7 @@ export default function TemplateFact({
   onTextClick?: () => void;
 }) {
   return (
-    <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: '#1b6db5' }}>
+    <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor }}>
       {/* Torn Paper (Approximation with CSS) */}
       <div className="relative w-[850px] min-h-[600px] bg-[#f8f5f0] shadow-[0_20px_50px_rgba(0,0,0,0.3)] p-24 z-20 flex items-center justify-center"
            style={{ transform: 'rotate(-1deg)' }}>

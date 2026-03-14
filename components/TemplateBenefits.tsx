@@ -13,6 +13,7 @@ export default function TemplateBenefits({
   items,
   fontSize = 55,
   fontFamily = "'Lato', sans-serif",
+  backgroundColor = "#1b6db5",
   textColor = "#ffffff",
   textAlign = "left",
   lineHeight = 1.2,
@@ -22,6 +23,7 @@ export default function TemplateBenefits({
   items: { icon: string, text: string }[];
   fontSize?: number;
   fontFamily?: string;
+  backgroundColor?: string;
   textColor?: string;
   textAlign?: string;
   lineHeight?: number;
@@ -29,7 +31,7 @@ export default function TemplateBenefits({
   onTextClick?: () => void;
 }) {
   return (
-    <div className="absolute inset-0 px-24 py-20 flex flex-col" style={{ backgroundColor: '#1b6db5' }}>
+    <div className="absolute inset-0 px-24 py-20 flex flex-col" style={{ backgroundColor }}>
       {/* List */}
       <div 
         className={`relative z-20 flex flex-col gap-16 flex-grow justify-center pl-12 mt-32 cursor-pointer transition-shadow w-full ${isSelected ? 'ring-4 ring-blue-500 ring-offset-8 rounded-xl p-4' : ''}`}
